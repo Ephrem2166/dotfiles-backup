@@ -1,0 +1,88 @@
+# ____  _  _   __   _  _ 
+#/ ___)/ )( \ / _\ ( \/ )
+#\___ \\ /\ //    \ )  / 
+#(____/(_/\_)\_/\_/(__/  
+#
+
+# only enable this if every app you use is compatible with wayland
+# xwayland enable
+
+### Variables 
+set $height 12
+
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Font
+font pango:JetBrainsMono Nerd Font 10
+
+# Colorscheme
+# Nord
+set $background = #2E3440
+set $foreground = #D8DEE9
+set $color0     = #3B4252
+set $color1     = #BF616A
+set $color2     = #A3BE8C
+set $color3     = #EBCB8B
+set $color4     = #81A1C1
+set $color5     = #B48EAD
+set $color6     = #88C0D0
+set $color7     = #E5E9F0
+set $color8     = #4C566A
+set $color9     = #BF616A
+set $color10    = #A3BE8C
+set $color11    = #EBCB8B
+set $color12    = #81A1C1
+set $color13    = #B48EAD
+set $color14    = #8FBCBB
+set $color15    = #ECEFF4
+
+# Colors                
+client.focused #2E3440 #D8DEE9 #3B4252   
+client.focused_inactive #2E3440 #D8DEE9 #3B4252
+client.unfocused  #2E3440 #D8DEE9 #3B4252
+client.urgent #BF616A #D8DEE9 #BF616A 
+
+# Window Border
+default_border pixel 1
+default_floating_border normal
+hide_edge_borders smart
+
+### Idle configuration
+#
+# Example configuration:
+#
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+          before-sleep 'swaylock -f -c 000000'
+
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+### Input configuration
+#
+# Example configuration:
+#
+input "type:touchpad" {
+      tap enabled
+      natural_scroll enabled
+      middle_emulation enabled
+}
+
+
+# Add gaps in between all application windows
+gaps inner 5
+gaps outer 2
+smart_gaps on
+smart_borders on 
+### Auto Launchers
+include ./autostart
+#include ./environment.sh
+include ./bind
+include /etc/sway/config.d/*
+
