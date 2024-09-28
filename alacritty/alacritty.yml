@@ -1,0 +1,87 @@
+font:
+  normal:
+    family: 'UbuntuMono Nerd Font'
+    style: Regular
+  bold:
+    family: 'UbuntuMono Nerd Font'
+    style: Bold
+  italic:
+    family: 'UbuntuMono Nerd Font'
+    style: Italic
+  bold_italic:
+    family: 'UbuntuMono Nerd Font'
+    style: Bold Italic
+  size: 10
+  offset:
+    x: 0
+    y: -3
+
+draw_bold_text_with_bright_colors: true
+
+scrolling:
+  multiplier: 4
+
+window:
+  opacity: 1.0
+
+  decorations: none
+
+  padding:
+    x: 9
+    y: 9
+
+  dynamic_padding: true
+  dynamic_title: true
+
+mouse:
+  hide_when_typing: true
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+colors:
+  # Default colors
+  primary:
+    background: '0x2E3440'
+    foreground: '0xD8DEE9'
+
+  # Normal colors
+  normal:
+    black:   '0x3B4252'
+    red:     '0xBF616A'
+    green:   '0xA3BE8C'
+    yellow:  '0xEBCB8B'
+    blue:    '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan:    '0x88C0D0'
+    white:   '0xE5E9F0'
+
+  # Bright colors
+  bright:
+    black:   '0x4C566A'
+    red:     '0xBF616A'
+    green:   '0xA3BE8C'
+    yellow:  '0xEBCB8B'
+    blue:    '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan:    '0x8FBCBB'
+    white:   '0xECEFF4'
+
+bell:
+  animation: Ease
+  duration: 300
+  color: '#d8dee9'
+
+cursor:
+  style:
+    shape: Beam
+    blinking: Always
+
+  unfocused_hollow: false
+  blink_interval: 500
+  blink_timeout: 30
+
+shell:
+  program: /bin/zsh
+
+
