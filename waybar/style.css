@@ -1,0 +1,120 @@
+@import "./colors.css";
+* {
+  background-color: @background;
+  color: @foreground;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", Roboto, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  min-height: 0;
+}
+
+/* Dont forget commas after each module! */
+#battery,
+#backlight,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#memory,
+#mpd,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#wireplumber,
+#keyboard-state,
+#custom-ddcutil,
+#custom-power,
+#custom-media,
+#custom-primary,
+#custom-clipboard,
+#custom-dunst,
+#temperature,
+#power-profiles-daemon,
+#idle_inhibitor {
+  background-color: @background;
+  padding: 0 5px;
+  margin: 0 2px;
+  color: @foreground;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-color: @border-color;
+  /*border-right: 1px solid @foreground;*/
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+  background: @background;
+  box-shadow: inherit;
+  border-bottom: 1px solid #ffffff;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: @foreground;
+}
+
+#workspaces button.focused {
+  color: @foreground;
+  border-bottom: 1px solid @background;
+}
+
+#mode {
+  color: @foreground;
+}
+
+@keyframes blink {
+  to {
+    color: black;
+  }
+}
+
+#battery.warning:not(.charging) {
+  color: @alert;
+}
+#battery.critical:not(.charging) {
+  color: @alert;
+}
+#battery.charging {
+  color: @foreground;
+}
+
+#cpu {
+  color: @foreground;
+}
+#cpu.warning {
+  color: @alert;
+}
+#cpu.critical {
+  color: @alert;
+}
+
+#temperature {
+  color: @foreground;
+}
+#temperature.critical {
+  color: @alert;
+}
+
+#memory {
+  color: @foreground;
+}
+#memory.warning {
+  color: @alert;
+}
+#memory.critical {
+  color: @alert;
+}
+
+#network {
+  color: @foreground;
+}
+#idle_inhibitor.activated {
+  color: @foreground;
+}
+
+#pulseaudio {
+  color: @foreground;
+}
